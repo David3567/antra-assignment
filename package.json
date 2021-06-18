@@ -1,7 +1,7 @@
 {
     "name": "challenge",
     "version": "1.0.0",
-    "description": "Walmart Mexico Code Challenge",
+    "description": "Antra FRE Code Challenge",
     "scripts": {
         "bootstrap": "lerna bootstrap"
     },

@@ -1,8 +1,6 @@
 ## Introduction:
 
-Believe it or not, Walmart Mexico is a growing startup-like division within Walmart that is looking for fullstack front-end developers like yourself to help it scale to a be a billion dollar revenue division.
-
-This code challenge is meant to mimic the type work we do each day as front-end/fullstack developers in the Walmart Mexico division. Everyday, we ask developers such as yourself to take ownership of the implementation and management of front-end features. This requires understanding of front-end architecture, data models, how-the-feature-works-end-2-end, in addition to implementing features/fixes end-2-end.
+This code challenge is meant to mimic the type work you will have to do each day as front-end/fullstack developers. Everyday, developers such as yourself to take ownership of the implementation and management of front-end features. This requires understanding of front-end architecture, data models, how-the-feature-works-end-2-end, in addition to implementing features/fixes end-2-end.
 
 Through this challenge, we are looking for signals that indicate that you would be able to handle the unique and interesting engineering challenges we have that take more than just writing of front-end code to fit a UI mock.
 
@@ -13,7 +11,7 @@ Our techstack is React server-side rendered using Next.js, Apollo Graphql interf
 ## Instructions:
 
 -   Fork the code challenge repo to your personal Github account
--   Once you are complete with the tasks of this challenge, push the code to your repo and send the link to the recruiter to forward to the hiring team for review.
+-   Once you are complete with the tasks of this challenge, push the code to your repo and send the link to the channel.
 -   See the diagram in the powerpoint PDF in this repo for the system architecture so you know how the various servers in this repo are connected.
 -   The tasks to complete are in the ___tasks_and_solutions.md___ file.
 

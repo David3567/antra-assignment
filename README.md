@@ -10,10 +10,10 @@ Our techstack is React server-side rendered using Next.js, Apollo Graphql interf
 
 ## Instructions:
 
--   Fork the code challenge repo to your personal Github account
--   Once you are complete with the tasks of this challenge, push the code to your repo and send the link to the channel.
--   See the diagram in the powerpoint PDF in this repo for the system architecture so you know how the various servers in this repo are connected.
--   The tasks to complete are in the ___tasks_and_solutions.md___ file.
+- Fork the code challenge repo to your personal Github account
+- Once you are complete with the tasks of this challenge, push the code to your repo and send the link to the channel.
+- See the diagram in the powerpoint PDF in this repo for the system architecture so you know how the various servers in this repo are connected.
+- The tasks to complete are in the **_tasks_and_solutions.md_** file.
 
 ---
 
@@ -29,7 +29,7 @@ Good luck! We look forward to reading your implementation.
 
 ## Attached
 
--   PDF of the UI design mocks and system diagram
+- PDF of the UI design mocks and system diagram
 
 ---
 
@@ -37,12 +37,12 @@ Good luck! We look forward to reading your implementation.
 
 - This repo is called a monorepo - essentially a repo consisting of many different applications (packages) that typically would be in individual repos. To manage this monorepo, we use Lerna (https://lerna.js.org/).
 
-- So to install dependencies you can either ___cd___ into each individual package (next_server, gql_server, microservice) and run
+- So to install dependencies you can either **_cd_** into each individual package (next_server, gql_server, microservice) and run
 
-     - npm install
+  - npm install
 
-    or in the root directory, run
+  or in the root directory, run
 
-     - npm run bootstrap
+  - npm run bootstrap
 
-- To start up each server, you currently have to ___cd___ into each package and run ___npm run start___, and in the case of the next_server, you need to run ___npm run build___ then ___npm run start___... don't worry, there is a Task in your TODOs to make your life easier :)
+- To start up each server, you currently have to **_cd_** into each package and run **_npm run start_**, and in the case of the next\*server, you need to run \*\*\_npm run build**\* then **_npm run start_\*\*... don't worry, there is a Task in your TODOs to make your life easier :)

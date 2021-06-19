@@ -1,19 +1,19 @@
 {
-    "name": "microservice",
-    "version": "1.0.0",
-    "description": "microservice",
-    "engines": {
-        "node": ">=12.0.0"
-    },
-    "scripts": {
-        "start": "node ./src/index.js",
-        "dev":"cross-env NODE_ENV=development node ./src/index.js",
-        "build":"cross-env NODE_ENV=production node ./src/index.js"
-    },
-    "author": "antra-fre",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.17.1",
-        "lodash": "^4.17.21"
-    }
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "microservice",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "cross-env NODE_ENV=development node ./src/index.js",
+    "build": "cross-env NODE_ENV=production node ./src/index.js"
+  },
+  "author": "antra-fre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  }
 }

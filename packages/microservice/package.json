@@ -8,7 +8,7 @@
     "scripts": {
         "start": "node ./src/index.js"
     },
-    "author": "walmex-team",
+    "author": "antra-fre",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",

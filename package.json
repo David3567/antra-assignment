@@ -5,7 +5,7 @@
     "scripts": {
         "bootstrap": "lerna bootstrap"
     },
-    "author": "walmex-team",
+    "author": "antra-fre",
     "license": "ISC",
     "dependencies": {
         "lerna": "^4.0.0"

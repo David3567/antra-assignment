@@ -31,6 +31,7 @@ const resolvers = {
     usersRecommendedItems: async (parent, args, context, info) => {
       // extract needed arguments
       const { username } = args;
+      const baseUrl = "http://localhost:3000";
 
       // log point before call
       console.log(
@@ -39,7 +40,7 @@ const resolvers = {
 
       // fetch the requested data from the data source
       const responseFromDataSource = await axios.get(
-        `http://localhost:3000/users/recommendations?username=${username}`
+        `${baseUrl}/users/recommendations?username=${username}`
       );
       const listOfRecommendedItemIds = responseFromDataSource.data;
 
@@ -50,7 +51,7 @@ const resolvers = {
         "\n"
       );
 
-      const listOfRecommendedItemsToReturn = [];
+      const collectAllPromise = [];
       for (const itemId of listOfRecommendedItemIds) {
         // log point before call
         console.log(
@@ -58,21 +59,21 @@ const resolvers = {
         );
 
         // fetch the requested data from the data source
-        const responseFromDataSource = await axios.get(
-          `http://localhost:3000/items?ids=${itemId}`
+        const responseFromDataSource = axios.get(
+          `${baseUrl}/items?ids=${itemId}`
         );
 
+        collectAllPromise.push(responseFromDataSource);
+      }
+      const listOfRecommendedItemsToReturn = (
+        await axios.all(collectAllPromise)
+      ).map((ele) => {
         // log point after call
         console.log(
-          `\nusersRecommendedItems > after GET /items?ids=${itemId}, response => `,
-          responseFromDataSource.data,
-          "\n"
+          `\nusersRecommendedItems > after GET /items?ids=${ele.data[0].id}, response => ${ele.data[0].name}\n`
         );
-
-        listOfRecommendedItemsToReturn.push(responseFromDataSource.data[0]);
-      }
-
-      // return the data
+        return ele.data[0];
+      });
       return listOfRecommendedItemsToReturn;
     },
     item: async (parent, args, context, info) => {
@@ -84,7 +85,7 @@ const resolvers = {
 
       // fetch the requested data from the data source
       const responseFromDataSource = await axios.get(
-        `http://localhost:3000/items?ids=${id}`
+        `${baseUrl}/items?ids=${id}`
       );
 
       // log point after call

@@ -8,13 +8,13 @@ Your instructions: <**_TODO-FILL_ME_IN_**>
 
 2. Create/code a way to have a single command start up all 3 servers for local development (microservice, gql, next.js). Then briefly write the instructions you would give to a new developer on your team on how to use it:
 
-Your instructions: <**_TODO-FILL_ME_IN_**>
+Your instructions: <**_1st lerna bootstrap to install all dependences, 2nd lerna run --parallel ${command}_**>
 
 ---
 
 3. The dev team you are working on has asked you to make sure this repo's code always looks pretty and easy to read since other developers from all around the world will be writing to it and some will not know what formatting you like in your code (ex. they may use 1 space vs 2 spaces to indent their code). Describe how you will make sure committed code is always formatted consistently and implement the tool or process.
 
-Describe your solution: <**_TODO-FILL_ME_IN_**>
+Describe your solution: <**_Use prettier to check the format, run npx prettier --write . before build. _**>
 
 ---
 

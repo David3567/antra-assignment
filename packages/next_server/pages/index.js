@@ -1,8 +1,10 @@
-import Head from "next/head";
-import { getAllData } from "../server/api";
+import { getSpecificationData } from "../server/api";
+import LayOut from "./layout";
 
 export default function Home() {
-  // getAllData();
-
-  return <div className="container">show me the money</div>;
+  return (
+    <div className="container">
+      <LayOut></LayOut>
+    </div>
+  );
 }

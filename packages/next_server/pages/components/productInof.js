@@ -1,15 +1,11 @@
-import React, { userState } from "react";
+import React, { useState, useEffect } from "react";
 
-function ProductDetails(props) {
-  const product = {
-    id: "0007",
-    name: "Apple Tv",
-    img: "apple_tv.jpg",
-    department: "electronics",
-    category: "tv and video",
-    weight: "10lbs",
-    price: 150.05,
-  };
+function ProductInfo(props) {
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    setProduct(props.product);
+  });
 
   return (
     <div>
@@ -36,4 +32,4 @@ function ProductDetails(props) {
   );
 }
 
-export default ProductDetails;
+export default ProductInfo;

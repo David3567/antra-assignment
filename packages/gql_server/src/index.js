@@ -78,6 +78,7 @@ const resolvers = {
     },
     item: async (parent, args, context, info) => {
       // extract needed arguments
+      const baseUrl = "http://localhost:3000";
       const { id } = args;
 
       // log point before call

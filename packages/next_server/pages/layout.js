@@ -4,7 +4,7 @@ import Link from "next/link";
 function LayOut({ children }) {
   return (
     <div>
-      <Link href="/ip/name/name">Go to Demo Page</Link>
+      <Link href="/ip/apple_tv/0007?username=james">Go to Demo Page</Link>
       {children}
     </div>
   );

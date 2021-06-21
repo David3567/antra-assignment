@@ -1,10 +1,14 @@
-import { getSpecificationData } from "../server/api";
 import LayOut from "./layout";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 export default function Home() {
   return (
     <div className="container">
-      <LayOut></LayOut>
+      <QueryClientProvider client={queryClient}>
+        <LayOut></LayOut>
+      </QueryClientProvider>
     </div>
   );
 }

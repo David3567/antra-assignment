@@ -1,12 +1,4 @@
-import React, { useState, useEffect } from "react";
-
-function ProductInfo(props) {
-  const [product, setProduct] = useState({});
-
-  useEffect(() => {
-    setProduct(props.product);
-  });
-
+function ProductInfo({ product }) {
   return (
     <div>
       <h3>This is details</h3>

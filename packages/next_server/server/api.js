@@ -36,15 +36,14 @@ const POSTS_AND_COMMENTS_QUERIES = gql`
   }
 `;
 
-export const getSpecificationData = (username, productId, productName) => {
+export const getSpecificationData = (productName, productId, username) => {
+  console.log("1111: ", productName, productId, username);
+  console.log("2222: ", productName, productId, username);
+
   return client
     .query({
       query: POSTS_AND_COMMENTS_QUERIES,
       variables: { id: productId, username: username },
     })
-    .then(({ data }) => {
-      console.log("get data from graphql: ", data);
-      if (data.item.img.split(".")[0] === productName) return data;
-      return { message: "no such product" };
-    });
+    .then(({ data }) => data);
 };

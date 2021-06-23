@@ -1,23 +1,14 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { onError } from "@apollo/client/link/error";
-
-// const errorLink = onError(({ graphqlErrors, networkError }) => {
-//     if (graphqlErrors) {
-//         graphqlErrors.map(({ message, location, path }) => {
-//             console.log(`Graphql error ${message}`);
-//         });
-//     }
-// });
 
 const baseUrl = "http://localhost:4000/graphql";
 
-export const client = new ApolloClient({
+const client = new ApolloClient({
   uri: baseUrl,
   cache: new InMemoryCache(),
 });
 
 const POSTS_AND_COMMENTS_QUERIES = gql`
-  query GetuserItems($id: ID! = "0007", $username: String! = "james") {
+  query GetuserItems($id: ID!, $username: String!) {
     item(id: $id) {
       id
       name
@@ -32,6 +23,7 @@ const POSTS_AND_COMMENTS_QUERIES = gql`
       id
       name
       img
+      price
     }
   }
 `;

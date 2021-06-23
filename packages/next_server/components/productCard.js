@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
+import style from "./productCard.module.css";
 
-function ProductCard(props) {
-  const [product, setProduct] = useState({});
-
-  useEffect(() => {
-    setProduct(props.product);
-  });
-
+function ProductCard({ product }) {
   return (
-    <div>
+    <div className={style.products_card}>
       <img
         src={`/images/${product.img}`}
         alt={product.name}
-        width="50"
-        height="50"
+        className={style.img}
       />
       <p>{product.name}</p>
+      <p>${product.price}</p>
     </div>
   );
 }

@@ -1,4 +1,8 @@
 function ProductInfo({ product }) {
+  let shipweight = "";
+  if (product.weight) shipweight = product.weight;
+  else if (product.packagedWeight) shipweight = product.packagedWeight;
+
   return (
     <div>
       <h3>This is details</h3>
@@ -6,19 +10,34 @@ function ProductInfo({ product }) {
       <img
         src={`/images/${product.img}`}
         alt={product.name}
-        width="500"
-        height="600"
+        width="400"
+        height="500"
       />
       <hr />
       <h4>Specifications</h4>
       <div>
-        Weight: <span>{product.weight}</span>
+        Weight:{" "}
+        <span>
+          <strong>{product.weight}</strong>
+        </span>
       </div>
       <div>
-        Department: <span>{product.department}</span>
+        Department:{" "}
+        <span>
+          <strong>{product.department}</strong>
+        </span>
       </div>
       <div>
-        Category: <span>{product.category}</span>
+        Category:{" "}
+        <span>
+          <strong>{product.category}</strong>
+        </span>
+      </div>
+      <div>
+        ShipWeight:{" "}
+        <span>
+          <strong>{shipweight}</strong>
+        </span>
       </div>
     </div>
   );
